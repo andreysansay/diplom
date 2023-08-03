@@ -8,6 +8,8 @@
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -385,7 +387,7 @@ ul {
 .services__border {
   display: block;
   height: 10px;
-  max-width: 1670px;
+  max-width: 98%;
   border-radius: 0 0 12px 12px;
   background: #CACADB;
   margin: 0 auto;
@@ -393,7 +395,7 @@ ul {
 .services__borders {
   display: block;
   height: 10px;
-  max-width: 1650px;
+  max-width: 96%;
   border-radius: 0 0 12px 12px;
   background: #E7E7F2;
   margin: 0 auto;
@@ -889,4 +891,6 @@ ul {
   .footer__info__tel {
     justify-content: center;
   }
-}/*# sourceMappingURL=homepage.css.map */
+}
+
+/*# sourceMappingURL=homepage.css.map */
