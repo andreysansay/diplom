@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "./color";
+@import "./reset";
+@import "./mixin";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+._container {
+  max-width: 1360px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.header {
+  background: transparent;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo img:first-child {
+    padding-top: 17px;
+  }
+
+  &__logo span {
+    color: $main-regular;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  &__logo h4 {
+    color: $basic-white;
+    font-family: Montserrat, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+    }
+
+    &__info li a {
+      color: $grey-text;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    &__info li a span {
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    &__info li span {
+      color: $grey-text;
+      text-align: right;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__info .prime {
+      background: $accent;
+      border-radius: 8px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 7px;
+    }
+
+    &__info #prime__link {
+      color: $basic-white;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: end;
+      gap: 20px;
+    }
+
+    #services  {
+      color: $accent;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__list li a {
+      list-style: none;
+      color: white;
+      text-align: right;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__list li a span {
+      color: $accent;
+    }
+  }
+}
+
+.burger-button {
+  position: absolute;
+  color: white;
+  top: 64px;
+  right: 22px;
+  padding: 5px 10px;
+  font-size: 20px;
+  background: $accent;
+  border-radius: 7px;
+}
+
+@media (max-width: 576px) {
+  .burger-menu {
+    display: none;
+  }
+  .active {
+    display: flex;
+    justify-content: end;
+  }
+  .header__navbar__list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: $background2;
+    box-shadow: 0 0 10px 0 darkgray;
+    border-radius: 5px;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 577px) {
+  .burger-button {
+    display: none;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .header__logo img:first-child {
+    width: 100px;
+  }
+  .header__logo__symbol {
+    height: 30px;
+  }
+  .header__logo span {
+    font-size: 28px;
+  }
+  .header__navbar__list li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    display: block;
+  }
+  .header__logo {
+    padding-bottom: 20px;
+  }
+  .header__navbar__info {
+    position: absolute;
+    top: 30px;
+  }
+  .header__navbar__list {
+    justify-content: start;
+  }
+}
+
+//============================
+
+
+.root {
+  background: $background2;
+  height: 150vh;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+
+.e-commerce {
+
+  &__container {
+    padding-top: 180px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    //width: 1360px;
+  }
+
+  &__info img {
+    border-radius: 24px;
+    background: $basic-white;
+    padding: 14px;
+  }
+
+  &__info h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    background: $background1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__info p{
+    max-width: 1360px;
+    color: $basic-white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 158%;
+  }
+
+  &__info button {
+    color: $basic-white;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    width: 208px;
+    height: 56px;
+    border-radius: 12px;
+    background: $active-regular;
+  }
+
+  &__info button a {
+    color: var(--basic-white, #FFF);
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 30px;
+  }
+
+  &__elements span {
+    display: block;
+    //padding: 10px;
+    background: rgba(255, 255, 255, 0.50);
+    width: 1360px;
+    height: 4px;
+    margin-top: 60px;
+  }
+}
+
+//======================
+
+
+.area {
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    width: 1360px;
+
+  }
+
+  &__border {
+    display: block;
+    height: 10px;
+    max-width: 1670px;
+    border-radius: 0 0 12px 12px;
+    background: $backgroundbord;
+    margin: 0 auto;
+  }
+
+  &__borders {
+    display: block;
+    height: 10px;
+    max-width: 1650px;
+    border-radius: 0 0 12px 12px;
+    background: $backgroundbords;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    display: flex;
+  }
+
+  &__title h2 {
+    color: $basic-white;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    //padding-bottom: 30px;
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    margin-bottom: 60px;
+    gap: 15px 60px;
+
+  }
+
+  &__text img {
+    position: relative;
+    left: -16px;
+    top: 20px;
+
+  }
+
+  &__text p {
+    color: $basic-white;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 144%;
+  }
+}
+
+
+//================
+
+
+.publications {
+  background-color: $grey-bg;
+  padding-bottom: 30px;
+
+  &__tells {
+    width: 525px;
+    max-height: 72px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__tells span {
+    color: $active-regular;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__tells h4 {
+    background: $background1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 27px;
+  }
+
+  &__calendar {
+    display: flex;
+    flex-direction: column;
+    background: $basic-white;
+    width: 32%;
+  }
+
+  &__content {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__calendar h5 {
+    margin-top: 30px;
+    color: $active-regular;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 15px;
+  }
+
+  &__calendar span {
+    margin-top: 15px;
+    color: $grey-text;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: $active-regular;
+  }
+
+  &__borders {
+    display: inline-block;
+    height: 4px;
+    border-bottom: 4px solid $active-regular;
+  }
+
+  &__calendar p {
+    margin-top: 15px;
+    color: $basic-black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 157%;
+
+  }
+}
+
+.borders {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border: 4px solid $grey-separator;
+}
+
+
+@media (max-width: 768px) {
+  .publications__cards {
+    justify-content: center;
+  }
+  .publications__calendar {
+    width: 100% ;
+  }
+  .publications__tells h4 {
+    font-size: 25px;
+  }
+  .publications__tells span {
+    font-size: 18px;
+  }
+  .publications__calendar h5 {
+    font-size: 15px;
+    padding-bottom: 0;
+  }
+  .publications__calendar span {
+    font-size: 12px;
+  }
+  .publications__calendar p {
+    font-size: 15px;
+  }
+}
+
+//==============
+
+
+
+.footer {
+  background: $grey-bg;
+  padding-bottom: 30px;
+
+  .footer__address {
+    position: relative;
+
+    &__info {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__info span {
+      color: $main-regular;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__info span a {
+      color: $active-regular;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    &__emp {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__emp span {
+      color: $grey-text;
+      text-align: right;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.footer__info__tel {
+  padding-top: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__info__tel span {
+  color: $main-alt;
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer__info__tel span a {
+  color: $active-regular;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.icon__line {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: $grey-separator;
+  margin-bottom: 30px;
+}
+
+
+@media (max-width: 992px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer__address__emp {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .footer .footer__address__emp span {
+    position: relative;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__info__tel {
+    justify-content: center;
+  }
+}
